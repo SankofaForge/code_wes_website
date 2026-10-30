@@ -1,6 +1,6 @@
 export const site = {
   name: 'Code_Wes',
-  url: 'https://code-wes-website.vercel.app',
+  url: 'https://code-wes-redesign.vercel.app',
   tagline: "Wesleyan's coding club",
   description:
     "Code_Wes is Wesleyan's coding club: a place to talk through the CS major, meet outside of classes, and work on projects together.",
