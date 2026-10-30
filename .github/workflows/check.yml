@@ -1,0 +1,31 @@
+name: Check
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      # The build reads every file in content/members/ and fails with the file and field to fix.
+      - run: npm run build
