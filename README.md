@@ -1,35 +1,42 @@
-The Code_Wes website can be found [here](https://code-wes-website.vercel.app/).
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Code_Wes website
 
-## Getting Started
+The site for Code_Wes, Wesleyan's coding club. The home page is the club's history read as a commit graph, from the 2022 first commit to the current board, and every member gets a page of their own.
 
-First, run the development server:
+This branch is a redesign proposal for the board. The current site is at [code-wes-website.vercel.app](https://code-wes-website.vercel.app/).
+
+## Add yourself
+
+A member page is one JSON file.
+
+1. Create `content/members/your-name.json`. The file name becomes the address: `ada-lovelace.json` is served at `/members/ada-lovelace/`.
+2. Fill in `name`, `role` and `study`. Everything else is optional. [`content/member.schema.json`](content/member.schema.json) lists the fields, and editors that read JSON Schema will autocomplete them.
+3. If you want a photo, put it in `public/members/` (WebP or JPEG, under 200 KB) and describe it in `alt`.
+4. Open a pull request. The build reads every member file and stops with the file and field to fix.
+
+The `/join/` page on the site walks through the same steps with a starting file.
+
+## Run it
+
+Node 20.9 or newer.
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`npm run check` runs lint, the type check and the production build, the same steps CI runs on every pull request. The build is a static export in `out/`, so GitHub Pages, Vercel or any static host can serve it.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Where things live
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+| Path | What it holds |
+| --- | --- |
+| `content/members/` | one file per member |
+| `src/data/site.ts` | club links and the history shown on the home page, with real commit SHAs |
+| `src/app/` | pages: home, members, a member, join, 404 |
+| `src/components/BoardMerge.tsx` | the board drawing on the home page |
+| `src/engine/`, `src/motion/` | GSAP setup, page transitions and every motion timing |
+| `DESIGN.md` | the design reasoning, palette, type and layout plan |
 
-## Learn More
+## Photos
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Member photos and text belong to the members who provided them. The 2026 board's come from the club's "meet the board" post.
