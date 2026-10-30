@@ -4,6 +4,7 @@ import { gsap } from 'gsap';
 import { usePage } from '@/engine/next';
 import { prefersReducedMotion } from '@/engine';
 import { declarations } from '@/data/site';
+import { languageIcons } from '@/data/language-icons';
 import { motion } from '@/motion/params';
 
 const VALUE = '"We are Code_Wes!"';
@@ -16,6 +17,11 @@ const first = declarations[0];
 export function HeadLine() {
   const text = useRef<HTMLSpanElement>(null);
   const lang = useRef<HTMLSpanElement>(null);
+  const icon = useRef<SVGPathElement>(null);
+  const setLang = (name: string) => {
+    if (lang.current) lang.current.textContent = name;
+    icon.current?.setAttribute('d', languageIcons[name] ?? '');
+  };
   const [paused, setPaused] = useState(false);
   const [moving, setMoving] = useState(false);
   const clock = useRef<gsap.core.Timeline | null>(null);
@@ -35,7 +41,7 @@ export function HeadLine() {
       const full = d.start + VALUE + d.end;
       const tl = gsap.timeline({ onComplete: cycle });
       const show = (n: number, caret: boolean) => () => { el.textContent = full.slice(0, n) + (caret ? '▌' : ''); };
-      tl.call(() => { if (lang.current) lang.current.textContent = d.lang; });
+      tl.call(() => setLang(d.lang));
       for (let n = 1; n <= full.length; n++) tl.call(show(n, true), [], `+=${t.type}`);
       for (let b = 0; b < Math.round(t.hold / (t.blink * 2)); b++) {
         tl.call(show(full.length, false), [], `+=${t.blink}`).call(show(full.length, true), [], `+=${t.blink}`);
@@ -68,6 +74,9 @@ export function HeadLine() {
         </span>
       </h1>
       <p className="headline__meta">
+        <svg className="headline__icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path ref={icon} d={languageIcons[first.lang]} />
+        </svg>
         <span ref={lang} aria-hidden="true">{first.lang}</span>
         {moving && (
           <button type="button" className="headline__pause" aria-pressed={paused} onClick={toggle}>

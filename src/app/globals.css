@@ -149,7 +149,9 @@ p code, li code { font-size: 0.9em; color: var(--c-blue); overflow-wrap: anywher
   display: block; font-family: var(--f-code); font-size: var(--t-xl); line-height: 1.15;
   letter-spacing: -0.02em; min-height: 2.3em; overflow-wrap: anywhere;
 }
-.headline__meta { margin-top: 0.6rem; display: flex; gap: 1.25rem; align-items: baseline; font-family: var(--f-code); font-size: var(--t-xs); color: var(--c-muted); }
+.headline__meta { margin-top: 0.6rem; display: flex; gap: 0.75rem; align-items: center; font-family: var(--f-code); font-size: var(--t-xs); color: var(--c-muted); }
+.headline__icon { width: clamp(1.75rem, 1.4rem + 1vw, 2.5rem); height: auto; fill: var(--c-fg); flex-shrink: 0; }
+.headline__meta > span { font-size: var(--t-s); margin-right: 0.5rem; }
 .headline__pause {
   font-size: inherit; color: var(--c-muted); padding: 0.4rem 0;
   text-decoration: underline; text-underline-offset: 0.25em; text-decoration-color: var(--c-line);
