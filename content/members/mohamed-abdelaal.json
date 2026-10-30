@@ -1,0 +1,19 @@
+{
+  "$schema": "../member.schema.json",
+  "name": "Mohamed Abdelaal",
+  "role": "President",
+  "board": 2026,
+  "order": 1,
+  "study": "Computer Science major, Data Analysis minor",
+  "funFact": "I went to a boarding school in Giza, Egypt, and got to see the pyramids every time I went to school!",
+  "askMeAbout": [
+    "Data analysis"
+  ],
+  "photo": {
+    "src": "/members/mohamed-abdelaal.webp",
+    "alt": "Mohamed Abdelaal in a three-piece suit and red tie, standing outside a sunlit building"
+  },
+  "links": {},
+  "projects": [],
+  "seeded": true
+}

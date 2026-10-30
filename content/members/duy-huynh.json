@@ -1,0 +1,20 @@
+{
+  "$schema": "../member.schema.json",
+  "name": "Duy Huynh",
+  "role": "Event Planner",
+  "board": 2026,
+  "order": 5,
+  "study": "Computer Science and Economics",
+  "funFact": "I'm good at Counter-Strike.",
+  "askMeAbout": [
+    "Counter-Strike",
+    "Economics"
+  ],
+  "photo": {
+    "src": "/members/duy-huynh.webp",
+    "alt": "Duy Huynh in a black hoodie against a concrete wall"
+  },
+  "links": {},
+  "projects": [],
+  "seeded": true
+}

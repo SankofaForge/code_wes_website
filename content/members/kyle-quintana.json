@@ -1,0 +1,41 @@
+{
+  "$schema": "../member.schema.json",
+  "name": "Kyle Quintana",
+  "role": "Social Media & Outreach",
+  "board": 2026,
+  "order": 2,
+  "study": "Computer Science × IDEAS linked major, CEAS minor",
+  "funFact": "I'm a QuestBridge Scholar from Arizona and a hobbyist nature photographer.",
+  "askMeAbout": [
+    "Nature photography",
+    "The IDEAS linked major",
+    "QuestBridge"
+  ],
+  "photo": {
+    "src": "/members/kyle-quintana.webp",
+    "alt": "Kyle Quintana smiling in round glasses, trees and evening light behind"
+  },
+  "links": {},
+  "projects": [],
+  "seeded": true,
+  "gallery": [
+    {
+      "src": "/members/kyle-quintana-photo-1.webp",
+      "alt": "The sun setting over desert hills, a line of birds crossing it",
+      "width": 367,
+      "height": 879
+    },
+    {
+      "src": "/members/kyle-quintana-photo-2.webp",
+      "alt": "A weathered dead cactus under a blue sky, mountains on the horizon",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "src": "/members/kyle-quintana-photo-3.webp",
+      "alt": "Red and violet clouds at dusk over the silhouette of a tree",
+      "width": 768,
+      "height": 576
+    }
+  ]
+}

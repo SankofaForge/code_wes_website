@@ -1,0 +1,19 @@
+{
+  "$schema": "../member.schema.json",
+  "name": "Amna Mustafa",
+  "role": "Social Media & Outreach",
+  "board": 2026,
+  "order": 3,
+  "study": "Computer Science and GSAS major, CEAS minor",
+  "funFact": "I can speak 5 languages!",
+  "askMeAbout": [
+    "Learning languages"
+  ],
+  "photo": {
+    "src": "/members/amna-mustafa.webp",
+    "alt": "Amna Mustafa in a black embroidered scarf, smiling in a café"
+  },
+  "links": {},
+  "projects": [],
+  "seeded": true
+}

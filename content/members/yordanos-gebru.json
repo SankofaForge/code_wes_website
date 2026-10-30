@@ -1,0 +1,19 @@
+{
+  "$schema": "../member.schema.json",
+  "name": "Yordanos Gebru",
+  "role": "Social Media & Outreach",
+  "board": 2026,
+  "order": 4,
+  "study": "Computer Science and Neuroscience",
+  "funFact": "I am an African scholar from Ethiopia and I used to own 12 cats!",
+  "askMeAbout": [
+    "Neuroscience"
+  ],
+  "photo": {
+    "src": "/members/yordanos-gebru.webp",
+    "alt": "Yordanos Gebru in braids and a black puffer jacket on a city street"
+  },
+  "links": {},
+  "projects": [],
+  "seeded": true
+}

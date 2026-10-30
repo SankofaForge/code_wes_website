@@ -1,0 +1,33 @@
+{
+  "$schema": "../member.schema.json",
+  "name": "Yinka Vaughan",
+  "role": "Event Planner",
+  "board": 2026,
+  "order": 6,
+  "study": "Computer Science and Economics",
+  "funFact": "I play competitive Pokémon.",
+  "askMeAbout": [
+    "Competitive Pokémon",
+    "Economics"
+  ],
+  "photo": {
+    "src": "/members/yinka-vaughan.webp",
+    "alt": "Yinka Vaughan pressing a pair of headphones on and looking up"
+  },
+  "links": {
+    "github": "https://github.com/Builder106"
+  },
+  "projects": [
+    {
+      "name": "WesNest Search",
+      "url": "https://github.com/Builder106/code-wes-projects",
+      "about": "Search Wesleyan's club directory by what a club does, not only by its exact name. A Code_Wes project, in development."
+    },
+    {
+      "name": "Piano Tool",
+      "url": "https://piano-tool.vercel.app",
+      "about": "A piano tutor that listens while you play and checks the notes."
+    }
+  ],
+  "seeded": true
+}

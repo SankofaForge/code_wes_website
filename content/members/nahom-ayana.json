@@ -1,0 +1,19 @@
+{
+  "$schema": "../member.schema.json",
+  "name": "Nahom Ayana",
+  "role": "Financial Manager",
+  "board": 2026,
+  "order": 7,
+  "study": "Computer Science and Physics",
+  "funFact": "I have a twin brother.",
+  "askMeAbout": [
+    "Physics"
+  ],
+  "photo": {
+    "src": "/members/nahom-ayana.webp",
+    "alt": "Nahom Ayana in a pale green shirt against a white wall"
+  },
+  "links": {},
+  "projects": [],
+  "seeded": true
+}
