@@ -136,17 +136,9 @@ p code, li code { font-size: 0.9em; color: var(--c-blue); overflow-wrap: anywher
   column-gap: calc(var(--u) * 3);
 }
 .commit > .node { top: 0.2rem; }
-.commit__meta {
-  display: flex; flex-direction: column; gap: 0.15rem;
-  font-family: var(--f-code); font-size: var(--t-xs); color: var(--c-muted);
-  padding-top: 0.25rem;
-}
-.commit__sha { color: var(--lane); }
 .commit__title { font-size: var(--t-m); font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; }
 .commit__title--big { font-size: var(--t-xl); font-weight: 700; letter-spacing: -0.035em; line-height: 1; }
 .commit__body { margin-top: 0.45rem; max-width: 38rem; color: var(--c-fg); }
-.commit__msg { margin-top: 0.4rem; font-size: var(--t-s); color: var(--c-muted); }
-.commit__msg q { font-family: var(--f-code); font-size: 0.95em; color: var(--c-fg); quotes: '"' '"'; }
 
 .commit--head, .commit--board, .commit--root { display: block; }
 .commit--head { padding-bottom: clamp(5rem, 16vh, 10rem); }
@@ -359,7 +351,6 @@ p code, li code { font-size: 0.9em; color: var(--c-blue); overflow-wrap: anywher
   .corner__nav { gap: 1.1rem; }
 
   .commit { grid-template-columns: minmax(0, 1fr); row-gap: 0.35rem; padding-bottom: calc(var(--u) * 6); }
-  .commit__meta { flex-direction: row; gap: 0.8rem; padding-top: 0; }
   .headline__code { min-height: 3.5em; }
 
   .merge { aspect-ratio: var(--ar-phone); }

@@ -1,6 +1,6 @@
 # Code_Wes website
 
-The site for Code_Wes, Wesleyan's coding club. The home page is the club's history read as a commit graph, from the 2022 first commit to the current board, and every member gets a page of their own.
+The site for Code_Wes, Wesleyan's coding club. The home page draws the current board as branches merging into the club's main line, and every member gets a page of their own.
 
 This branch is a redesign proposal for the board. The current site is at [code-wes-website.vercel.app](https://code-wes-website.vercel.app/).
 
@@ -31,7 +31,7 @@ npm run dev
 | Path | What it holds |
 | --- | --- |
 | `content/members/` | one file per member |
-| `src/data/site.ts` | club links and the history shown on the home page, with real commit SHAs |
+| `src/data/site.ts` | club links and the typed name line |
 | `src/app/` | pages: home, members, a member, join, 404 |
 | `src/components/BoardMerge.tsx` | the board drawing on the home page |
 | `src/engine/`, `src/motion/` | GSAP setup, page transitions and every motion timing |
