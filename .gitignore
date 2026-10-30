@@ -15,6 +15,9 @@
 # production
 /build
 
+# visual QA output
+/.shots/
+
 # misc
 .DS_Store
 *.pem

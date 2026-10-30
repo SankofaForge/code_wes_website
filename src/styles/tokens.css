@@ -1,0 +1,50 @@
+/* Code_Wes tokens. Values come from DESIGN.md: the 2023 ground, the 2026 board post's blue and
+   red, and a cool polaroid paper. Names are the engine's contract. */
+
+:root {
+  /* Color, by role */
+  --c-bg: #0d1117;
+  --c-fg: #e6edf3;
+  --c-muted: #8d96a0;
+  --c-line: #30363d;
+  --c-accent: #5cb8ff;
+  --c-curtain: #0d1117;
+  --c-blue: #5cb8ff;
+  --c-red: #ff4d5e;
+  --c-paper: #e9eaec;
+  --c-paper-ink: #1b1f24;
+
+  /* Type families (next/font variables) */
+  --f-display: var(--font-hanken), system-ui, sans-serif;
+  --f-body: var(--font-hanken), system-ui, sans-serif;
+  --f-code: var(--font-space-mono), ui-monospace, 'SFMono-Regular', monospace;
+
+  /* Fluid type scale: four levels with large jumps */
+  --t-mega: clamp(3.25rem, 1rem + 9.6vw, 10rem);
+  --t-xl: clamp(1.6rem, 0.9rem + 3vw, 3.75rem);
+  --t-l: clamp(1.5rem, 1.2rem + 1.4vw, 2.5rem);
+  --t-m: clamp(1.15rem, 1.05rem + 0.45vw, 1.5rem);
+  --t-body: clamp(1rem, 0.96rem + 0.15vw, 1.0625rem);
+  --t-s: 0.875rem;
+  --t-xs: 0.8125rem;
+
+  /* Space */
+  --u: clamp(0.5rem, 0.35rem + 0.6vw, 1rem);
+  --gutter: clamp(1rem, 0.6rem + 1.6vw, 2.5rem);
+  --cols: 12;
+  --rail: clamp(2rem, 1.2rem + 2.4vw, 4.5rem); /* width of the graph column */
+  --rail-x: calc(var(--rail) / 2); /* where the main line runs */
+
+  /* Shape */
+  --radius: 0px;
+
+  /* Layers */
+  --z-gl: 0;
+  --z-content: 1;
+  --z-header: 50;
+  --z-cursor: 80;
+  --z-curtain: 90;
+  --z-loader: 100;
+
+  color-scheme: dark;
+}

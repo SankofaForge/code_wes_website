@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Code_Wes member",
+  "description": "One file per member in content/members/. The file name (lowercase, hyphens) is the page URL: content/members/ada-lovelace.json becomes /members/ada-lovelace/.",
+  "type": "object",
+  "required": ["name", "role", "study"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "name": { "type": "string", "description": "Your name as you want it shown." },
+    "role": { "type": "string", "description": "Your board role, or \"Member\"." },
+    "board": { "type": "integer", "description": "The board year, for board members only." },
+    "order": { "type": "integer", "description": "Position in the board drawing. Board members only." },
+    "study": { "type": "string", "description": "Majors and minors, in your own words." },
+    "funFact": { "type": "string" },
+    "askMeAbout": {
+      "type": "array",
+      "items": { "type": "string" },
+      "maxItems": 6,
+      "description": "Courses or topics people can ask you about, such as \"COMP 212\"."
+    },
+    "photo": {
+      "type": "object",
+      "required": ["src", "alt"],
+      "additionalProperties": false,
+      "description": "Optional. Put the image in public/members/ and describe it in alt.",
+      "properties": {
+        "src": { "type": "string", "pattern": "^/members/" },
+        "alt": { "type": "string", "minLength": 8 }
+      }
+    },
+    "gallery": {
+      "type": "array",
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": ["src", "alt", "width", "height"],
+        "additionalProperties": false,
+        "properties": {
+          "src": { "type": "string", "pattern": "^/members/" },
+          "alt": { "type": "string", "minLength": 8 },
+          "width": { "type": "integer" },
+          "height": { "type": "integer" }
+        }
+      }
+    },
+    "projects": {
+      "type": "array",
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": ["name", "url", "about"],
+        "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string" },
+          "url": { "type": "string", "pattern": "^https://" },
+          "about": { "type": "string" }
+        }
+      }
+    },
+    "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "github": { "type": "string", "pattern": "^https://github.com/" },
+        "linkedin": { "type": "string", "pattern": "^https://(www\\.)?linkedin.com/" },
+        "website": { "type": "string", "pattern": "^https://" }
+      }
+    },
+    "seeded": {
+      "type": "boolean",
+      "description": "True when someone else wrote this file for you. Delete it once you have checked your file."
+    }
+  }
+}
