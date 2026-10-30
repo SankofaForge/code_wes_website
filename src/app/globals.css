@@ -252,7 +252,7 @@ p code, li code { font-size: 0.9em; color: var(--c-blue); overflow-wrap: anywher
 
 .profile__h2 { font-size: var(--t-l); font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; }
 .profile__note { margin-top: 0.5rem; color: var(--c-muted); max-width: 40rem; }
-.profile__file, .profile__ask, .profile__projects, .profile__gallery, .profile__links, .profile__seeded { grid-column: 2; }
+.profile__file, .profile__ask, .profile__projects, .profile__gallery, .profile__links { grid-column: 2; }
 .profile__gallery { grid-column: 1 / -1; }
 
 .decl { margin-top: calc(var(--u) * 2); }
@@ -290,7 +290,6 @@ p code, li code { font-size: 0.9em; color: var(--c-blue); overflow-wrap: anywher
 .gallery img { width: 100%; height: 100%; object-fit: cover; }
 
 .profile__links { list-style: none; padding: 0; display: flex; gap: 1.5rem; font-family: var(--f-code); font-size: var(--t-s); }
-.profile__seeded { font-size: var(--t-s); color: var(--c-muted); max-width: 38rem; }
 
 .branches {
   margin-top: clamp(5rem, 14vh, 9rem);
@@ -364,7 +363,7 @@ p code, li code { font-size: 0.9em; color: var(--c-blue); overflow-wrap: anywher
   .branch { --pol-w: 68%; grid-row: auto; padding-top: 4rem; }
   .branch__lane { height: 4rem; }
   .profile__head { padding-top: 0; }
-  .profile__file, .profile__ask, .profile__projects, .profile__gallery, .profile__links, .profile__seeded { grid-column: 1; }
+  .profile__file, .profile__ask, .profile__projects, .profile__gallery, .profile__links { grid-column: 1; }
   .gallery { overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 0.5rem; }
   .gallery li { flex: 0 0 auto; height: 14rem; scroll-snap-align: start; }
 

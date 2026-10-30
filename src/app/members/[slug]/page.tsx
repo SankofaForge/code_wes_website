@@ -114,12 +114,6 @@ export default async function MemberPage({ params }: PageProps<'/members/[slug]'
           </ul>
         )}
 
-        {m.seeded && (
-          <p className="profile__seeded">
-            Written from the {m.board ?? ''} board post, not by {first}. {first} can change any of it in{' '}
-            <a className="link" href={`${site.repo}/blob/main/${file}`}>{file}</a>.
-          </p>
-        )}
       </div>
 
       <nav className="branches" aria-label="Other members">
