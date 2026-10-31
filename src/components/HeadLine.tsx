@@ -10,6 +10,12 @@ import { motion } from '@/motion/params';
 const VALUE = '"We are Code_Wes!"';
 const first = declarations[0];
 
+// On phones the line breaks once, after the assignment, so each half fits at a readable size.
+// Everywhere else it stays on one row. Either way the text is the same width at every step of
+// the typing, so it never reflows while it types or erases.
+const narrow = () => matchMedia('(max-width: 767px)').matches;
+const fmt = (s: string) => (narrow() ? s.replace(/( = | <- | := )/, (m) => `${m.slice(0, -1)}\n`) : s);
+
 // The 2023 homepage's title, kept: the club's name typed as a declaration in a random language,
 // held with a blinking caret, erased, and typed again in another. It runs on GSAP's clock, so it
 // pauses with the page, and it has a pause control (WCAG 2.2.2). Reduced motion: the first
@@ -28,7 +34,9 @@ export function HeadLine() {
 
   usePage(() => {
     const el = text.current;
-    if (!el || prefersReducedMotion()) return;
+    if (!el) return;
+    el.textContent = fmt(first.start + VALUE + first.end);
+    if (prefersReducedMotion()) return;
     setMoving(true);
     const t = motion.typing;
     let last = 0;
@@ -38,7 +46,7 @@ export function HeadLine() {
       if (i === last) i = (i + 1) % declarations.length;
       last = i;
       const d = declarations[i];
-      const full = d.start + VALUE + d.end;
+      const full = fmt(d.start + VALUE + d.end);
       const tl = gsap.timeline({ onComplete: cycle });
       const show = (n: number, caret: boolean) => () => { el.textContent = full.slice(0, n) + (caret ? '▌' : ''); };
       tl.call(() => setLang(d.lang));
@@ -51,7 +59,7 @@ export function HeadLine() {
       clock.current = tl;
     };
     // Start from the declaration the server rendered: hold it, then erase it.
-    const opening = first.start + VALUE + first.end;
+    const opening = fmt(first.start + VALUE + first.end);
     const tl = gsap.timeline({ onComplete: cycle });
     tl.to({}, { duration: t.hold });
     for (let n = opening.length; n >= 0; n--) tl.call(() => { el.textContent = opening.slice(0, n) + '▌'; }, [], `+=${t.erase}`);

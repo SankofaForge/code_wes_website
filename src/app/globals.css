@@ -145,9 +145,11 @@ p code, li code { font-size: 0.9em; color: var(--c-blue); overflow-wrap: anywher
 .commit--head > .node { top: clamp(0.4rem, 1.6vw, 1.4rem); }
 .commit__lede { margin-top: calc(var(--u) * 2.5); max-width: 34rem; font-size: var(--t-m); line-height: 1.4; color: var(--c-fg); }
 
+.headline { container-type: inline-size; }
+/* One row, sized so the longest declaration (C++, 38 characters at about 0.62em each) fits. */
 .headline__code {
-  display: block; font-family: var(--f-code); font-size: var(--t-xl); line-height: 1.15;
-  letter-spacing: -0.02em; min-height: 2.3em; overflow-wrap: anywhere;
+  display: block; font-family: var(--f-code); font-size: min(var(--t-xl), 4.1cqi); line-height: 1.15;
+  letter-spacing: -0.02em; white-space: pre; min-height: 1.15em;
 }
 .headline__meta { margin-top: 0.6rem; display: flex; gap: 0.75rem; align-items: center; font-family: var(--f-code); font-size: var(--t-xs); color: var(--c-muted); }
 .headline__icon { width: clamp(1.75rem, 1.4rem + 1vw, 2.5rem); height: auto; fill: var(--c-fg); flex-shrink: 0; }
@@ -352,7 +354,7 @@ p code, li code { font-size: 0.9em; color: var(--c-blue); overflow-wrap: anywher
   .corner__nav { gap: 1.1rem; }
 
   .commit { grid-template-columns: minmax(0, 1fr); row-gap: 0.35rem; padding-bottom: calc(var(--u) * 6); }
-  .headline__code { min-height: 3.5em; }
+  .headline__code { font-size: min(var(--t-xl), 7.4cqi); min-height: 2.3em; white-space: pre-wrap; overflow-wrap: anywhere; }
 
   .merge { aspect-ratio: var(--ar-phone); }
   .merge__lanes--desk { display: none; }
