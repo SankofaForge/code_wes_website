@@ -1,6 +1,36 @@
 @import '../styles/tokens.css';
 @import '../styles/engine.css';
 
+/* ---------- Scrollbar ---------- */
+
+html {
+  scrollbar-color: var(--c-line) var(--c-bg);
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--c-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--c-line);
+  border-radius: var(--radius);
+  border: 1px solid var(--c-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--c-muted);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--c-bg);
+}
+
 /* ---------- Shared ---------- */
 
 code, pre, kbd, .mono { font-family: var(--f-code); }
