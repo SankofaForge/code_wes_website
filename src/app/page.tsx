@@ -4,6 +4,7 @@ import { BoardMerge } from '@/components/BoardMerge';
 import { HeadLine } from '@/components/HeadLine';
 import { LogDriver } from '@/components/LogDriver';
 import { site } from '@/data/site';
+import { linkIcons } from '@/data/link-icons';
 import { getBoard } from '@/lib/members';
 
 const BOARD_YEAR = 2026;
@@ -58,7 +59,14 @@ export default function Home() {
             <ul className="elsewhere">
               {site.links.map((l) => (
                 <li key={l.label}>
-                  <a className="draw" href={l.href} target="_blank" rel="noopener noreferrer">{l.label}</a>
+                  <a className="elsewhere__link draw" href={l.href} target="_blank" rel="noopener noreferrer">
+                    {linkIcons[l.label] && (
+                      <svg className="elsewhere__icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d={linkIcons[l.label]} />
+                      </svg>
+                    )}
+                    <span>{l.label}</span>
+                  </a>
                   <span className="elsewhere__note">{l.note}</span>
                 </li>
               ))}

@@ -170,7 +170,8 @@ p code, li code { font-size: 0.9em; color: var(--c-blue); overflow-wrap: anywher
 .commit__cta { margin-top: calc(var(--u) * 2.5); }
 .elsewhere { list-style: none; padding: 0; margin-top: calc(var(--u) * 3.5); display: grid; gap: 0.6rem; }
 .elsewhere li { display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; align-items: baseline; }
-.elsewhere a { font-size: var(--t-m); font-weight: 600; }
+.elsewhere__link { display: inline-flex; align-items: center; gap: 0.55rem; font-size: var(--t-m); font-weight: 600; }
+.elsewhere__icon { width: 1.15em; height: 1.15em; fill: currentColor; flex-shrink: 0; }
 .elsewhere__note { color: var(--c-muted); font-size: var(--t-s); }
 
 /* ---------- The board merge ---------- */
