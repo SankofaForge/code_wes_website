@@ -130,7 +130,7 @@ DESKTOP                                         PHONE (390)
 ●  2023-09  8885245  First homepage             │
 ●  2023-06  5ca27bb  Code-Wes on GitHub         │
 ●  2022-09  9edff70  Initial commit             │
-◯  branch off here: Discord, GitHub, WesNest,   ◯ branch off here
+◯  branch off here: GroupMe, GitHub, WesNest,   ◯ branch off here
    add yourself (/join)
 
 /members/<slug>     main line on the left, one lane forks to the profile: polaroid, name at

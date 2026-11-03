@@ -9,8 +9,9 @@ export const site = {
   // The proposal fork. Point this at Code-Wes/code_wes_website if the board adopts the redesign.
   repo: 'https://github.com/SankofaForge/code_wes_website',
   links: [
-    { label: 'Discord', href: 'https://discord.gg/abTZpXBM7', note: 'where the club talks between meetings' },
+    { label: 'GroupMe', href: 'https://groupme.com/join_group/117817725/zQgq4oL4', note: 'where the club talks between meetings' },
     { label: 'Instagram', href: 'https://www.instagram.com/code_wes/', note: 'events and the board' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/company/codewes/', note: 'alumni, updates, and careers' },
     { label: 'WesNest', href: 'https://wesleyan.campuslabs.com/engage/organization/code_wes', note: 'the official club page' },
     { label: 'GitHub', href: 'https://github.com/Code-Wes', note: 'every repo, this site included' },
   ],
