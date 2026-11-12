@@ -15,6 +15,12 @@ A member page is one JSON file.
 
 The `/join/` page on the site walks through the same steps with a starting file.
 
+## Add an event, a number or a syllabus
+
+- **Event:** add `content/events/event-name.json`. [`content/events/README.md`](content/events/README.md) has a starting file. The event gets its own page and shows up on `/log`.
+- **Club number:** add it to `content/stats.json` with what it counts and where the number came from. The founding year goes in `founded`, with `foundedSource`.
+- **Syllabus:** add a `syllabus` to the course's file in `content/courses/`, but only for one the professor has posted publicly or agreed to share.
+
 ## Run it
 
 Node 20.9 or newer.
@@ -31,8 +37,12 @@ npm run dev
 | Path | What it holds |
 | --- | --- |
 | `content/members/` | one file per member |
+| `content/courses/` | one file per COMP course, drawn on the course map |
+| `content/resources/` | one file per resources folder: campus, careers, learning |
+| `content/events/` | one file per past event; each becomes a page and a tag on the log |
+| `content/history.json`, `content/stats.json` | the club's history and the numbers at the top of the log |
 | `src/data/site.ts` | club links and the typed name line |
-| `src/app/` | pages: home, members, a member, join, 404 |
+| `src/app/` | pages: home, log, events, resources, course map, members, join, 404 |
 | `src/components/BoardMerge.tsx` | the board drawing on the home page |
 | `src/engine/`, `src/motion/` | GSAP setup, page transitions and every motion timing |
 | `DESIGN.md` | the design reasoning, palette, type and layout plan |

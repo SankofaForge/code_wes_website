@@ -141,6 +141,43 @@ DESKTOP                                         PHONE (390)
 404                 git's own error: "fatal: ambiguous argument … unknown revision".
 ```
 
+### History, events and resources (added November 2026)
+
+The board asked for a shorter home page in October, so the club's history moved
+off it. A board member then asked for a history with club numbers, a page of past
+events, and a resources page with courses, syllabi and campus help. Each one
+reuses a part of git, so the pages read as the same log:
+
+```
+/log                      git log --stat. The club's commits newest first, events as tagged rows.
+                          The board's numbers sit under the title as one summary line, each with
+                          what it counts and its source. No numbers yet: the line is left out.
+/events                   git tag. Every event file as a plain list; an honest empty state until
+                          the first one lands. Shown in the corner nav only once an event exists.
+/events/<slug>            release notes for the tag: date, place, summary, people, what got built,
+                          photos, links; newer and older tag at the bottom.
+/resources                the resources folder read as a log: one commit per folder, its real file
+                          path in the meta column where dates go.
+/resources/courses        the prerequisite map: COMP courses as nodes in rows (100-level, gateway,
+                          cores, electives) joined by lanes in the blue-to-red run. Pointing at a
+                          course traces every lane back to where you start. The list under it is
+                          the escape hatch and the phone's index; on a phone the map pans sideways.
+/resources/courses/<slug> what it needs, what it opens, the 2023 guide's student take, a syllabus
+                          slot, members who list it under "ask me about".
+```
+
+- Content lives beside members, one file per unit, each with a schema:
+  `content/courses/`, `content/resources/`, `content/events/`, `content/stats.json`
+  and `content/history.json`. The build stops on a bad file and names the field.
+- Numbers and events come only from the board. `stats.json` needs `counts` and
+  `source` for every number, and `founded` needs `foundedSource`.
+- Course titles and prerequisites come from the department's "courses regularly
+  offered" page (read 2026-11-12). MATH 228 is written on the node, not drawn as a
+  lane, so no line crosses the whole map.
+- Motion: the map's lanes draw row by row on scroll, the same verb as the board
+  merge. Dashed "any one of these" lanes fade instead, because a draw-on would
+  overwrite their dashes.
+
 ### Genericness test
 
 - Skeleton: not a navbar over a hero. There is no hero block; HEAD is the first
