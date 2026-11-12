@@ -1,24 +1,13 @@
 import Link from 'next/link';
-import type { CSSProperties } from 'react';
 import { BoardMerge } from '@/components/BoardMerge';
 import { HeadLine } from '@/components/HeadLine';
 import { LogDriver } from '@/components/LogDriver';
+import { mix, Node } from '@/components/Node';
 import { site } from '@/data/site';
 import { linkIcons } from '@/data/link-icons';
 import { getBoard } from '@/lib/members';
 
 const BOARD_YEAR = 2026;
-
-// Each node's color is its place in time, on the board post's blue-to-red run.
-const mix = (i: number, n: number) => ({ '--mix': `${Math.round((i / (n - 1)) * 100)}%` }) as CSSProperties;
-
-function Node({ hollow }: { hollow?: boolean }) {
-  return (
-    <svg className={`node${hollow ? ' node--hollow' : ''}`} viewBox="0 0 20 20" aria-hidden="true">
-      <circle cx="10" cy="10" r="6" />
-    </svg>
-  );
-}
 
 export default function Home() {
   const board = getBoard(BOARD_YEAR);
