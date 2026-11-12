@@ -24,9 +24,10 @@ function Roll({ href, label, current }: { href: string; label: string; current: 
   );
 }
 
-export function Corner() {
+export function Corner({ events }: { events: boolean }) {
   const path = usePathname();
-  const at = (p: string) => path === p || path === `${p}/`;
+  // A section stays current on its inner pages: a course page is still in resources.
+  const at = (p: string) => path === p || path.startsWith(`${p}/`);
   // The home driver names the commit in view; the value only counts on the page that sent it.
   const [live, setLive] = useState<{ ref: string; path: string } | null>(null);
   useEffect(() => {
@@ -49,6 +50,9 @@ export function Corner() {
         <span>{ref}</span>
       </p>
       <nav className="corner__nav" aria-label="Site">
+        <Roll href="/log/" label="log" current={at('/log')} />
+        {events && <Roll href="/events/" label="events" current={at('/events')} />}
+        <Roll href="/resources/" label="resources" current={at('/resources')} />
         <Roll href="/members/" label="members" current={at('/members')} />
         <Roll href="/join/" label="join" current={at('/join')} />
       </nav>

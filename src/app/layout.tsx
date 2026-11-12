@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Corner } from '@/components/Corner';
 import { Motion } from '@/components/Motion';
 import { site } from '@/data/site';
+import { getEvents } from '@/lib/content';
 import { hanken, spaceMono } from './fonts';
 import './globals.css';
 
@@ -44,7 +45,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
           </div>
           <div className="curtain__ref"><span>git checkout</span> <span data-curtain-ref /></div>
         </div>
-        <Corner />
+        <Corner events={getEvents().length > 0} />
         <div id="smooth-wrapper">
           <div id="smooth-content">
             <main id="main" tabIndex={-1}>{children}</main>
