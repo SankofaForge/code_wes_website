@@ -374,6 +374,94 @@ p code, li code { font-size: 0.9em; color: var(--c-blue); overflow-wrap: anywher
 .lost__git { margin-top: calc(var(--u) * 3); font-size: var(--t-m); line-height: 1.5; white-space: pre-wrap; overflow-wrap: anywhere; max-width: 48rem; }
 .lost__next { margin-top: calc(var(--u) * 5); display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; }
 
+/* ---------- Log rows (log, resources) ---------- */
+
+.log--page { padding-top: clamp(6.5rem, 16vh, 10rem); padding-bottom: clamp(4rem, 10vh, 7rem); }
+.commit--intro { display: block; padding-bottom: clamp(3.5rem, 9vh, 6rem); }
+.commit--intro > .node { top: clamp(0.4rem, 1.6vw, 1.4rem); }
+.commit__meta {
+  display: flex; flex-direction: column; gap: 0.15rem;
+  font-family: var(--f-code); font-size: var(--t-xs); color: var(--c-muted);
+  padding-top: 0.25rem; overflow-wrap: anywhere;
+}
+.commit__meta a { color: inherit; min-height: 1.5rem; display: inline-flex; align-items: center; align-self: flex-start; }
+@media (hover: hover) { .commit__meta a:hover { color: var(--c-fg); } }
+.commit__sha { color: var(--lane); }
+.commit__tag { color: var(--c-red); }
+.commit__msg { margin-top: 0.4rem; font-size: var(--t-s); color: var(--c-muted); }
+.commit__msg q { font-family: var(--f-code); font-size: 0.95em; color: var(--c-fg); quotes: '"' '"'; }
+.commit--tag > .node { fill: var(--lane); }
+
+/* The summary line, in git's --stat words. */
+.stat { margin-top: calc(var(--u) * 4); max-width: 46rem; }
+.stat__line { font-size: var(--t-l); font-weight: 700; letter-spacing: -0.03em; line-height: 1.15; }
+.stat__num { color: var(--c-blue); }
+.stat__notes { margin-top: calc(var(--u) * 1.5); display: grid; gap: 0.3rem; font-size: var(--t-s); color: var(--c-muted); }
+.stat__notes div { display: flex; flex-wrap: wrap; gap: 0 0.5rem; }
+.stat__notes dt { color: var(--c-fg); }
+
+/* Course numbers by level, on /resources. */
+.levels { margin-top: calc(var(--u) * 2.5); display: grid; gap: 0.5rem; }
+.levels__row { display: grid; grid-template-columns: 7rem 1fr; gap: 1rem; align-items: baseline; }
+.levels dt { font-size: var(--t-s); color: var(--c-muted); }
+.levels dd { display: flex; flex-wrap: wrap; gap: 0.2rem 1.1rem; }
+.levels__course { font-size: var(--t-m); font-weight: 700; min-height: 1.75rem; display: inline-flex; align-items: center; }
+
+/* Resource links: name, who runs it, what it is. */
+.shelf { list-style: none; padding: 0; margin-top: calc(var(--u) * 3); display: grid; gap: calc(var(--u) * 2.25); }
+.shelf li { display: flex; flex-wrap: wrap; gap: 0.15rem 0.9rem; align-items: baseline; }
+.shelf__name { font-size: var(--t-m); font-weight: 600; }
+.shelf__from { font-size: var(--t-s); color: var(--c-muted); }
+.shelf__about { flex-basis: 100%; max-width: 38rem; }
+
+.start { margin-top: calc(var(--u) * 2.5); padding: 0; list-style: none; counter-reset: start; display: grid; gap: 0.8rem; max-width: 40rem; }
+.start li { counter-increment: start; display: grid; grid-template-columns: 2rem 1fr; }
+.start li::before { content: counter(start); font-family: var(--f-code); color: var(--c-blue); }
+
+/* ---------- Course map ---------- */
+
+.map { margin-top: calc(var(--u) * 6); max-width: 72rem; }
+.map__svg { display: block; width: 100%; height: auto; overflow: visible; }
+.map__lanes .lane { --lane: color-mix(in oklch, var(--c-blue), var(--c-red) var(--mix, 0%)); }
+.lane--any { stroke-dasharray: 5 5; }
+.map__node { --lane: color-mix(in oklch, var(--c-blue), var(--c-red) var(--mix, 0%)); transition: opacity 0.3s; }
+.map__node rect { fill: var(--c-bg); stroke: var(--lane); stroke-width: 2; vector-effect: non-scaling-stroke; transition: fill 0.3s; }
+.map__node text { text-anchor: middle; fill: var(--c-fg); pointer-events: none; }
+.map__num { font-family: var(--f-code); font-size: 12px; fill: var(--lane) !important; }
+.map__short { font-weight: 700; font-size: 15px; letter-spacing: -0.01em; }
+.map__extra { font-size: 11px; fill: var(--c-muted) !important; }
+@media (hover: hover) { .map__node:hover rect { fill: #161b22; } }
+.map.is-tracing .map__node:not(.is-on) { opacity: 0.3; }
+.map.is-tracing .lane:not(.is-lit) { opacity: 0.15; }
+.map.is-tracing .map__node.is-on rect { fill: #161b22; }
+.map .lane { transition: opacity 0.3s, stroke-width 0.3s, filter 0.3s; }
+
+.map__key { list-style: none; padding: 0; margin-top: calc(var(--u) * 2); display: flex; flex-wrap: wrap; gap: 0.5rem 2rem; font-size: var(--t-s); color: var(--c-muted); }
+.map__key li { display: flex; align-items: center; gap: 0.6rem; }
+.map__key svg { width: 2.5rem; height: 0.5rem; overflow: visible; }
+.map__key .lane { --lane: var(--c-blue); }
+.map__key-extra { font-size: 0.8rem; color: var(--c-fg); }
+
+.catalog { margin-top: clamp(4rem, 10vh, 7rem); display: grid; gap: calc(var(--u) * 5); }
+.catalog .roster { margin-top: calc(var(--u) * 1.5); }
+.catalog__link { grid-template-columns: minmax(0, 2fr) minmax(0, 5fr) minmax(0, 4fr); }
+.catalog__title { font-size: var(--t-m); }
+.page__source { margin-top: calc(var(--u) * 6); max-width: 44rem; font-size: var(--t-s); color: var(--c-muted); }
+
+/* ---------- Course and event pages ---------- */
+
+.course__number { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; align-items: baseline; margin-bottom: calc(var(--u) * 1.5); font-family: var(--f-code); font-size: var(--t-m); color: var(--c-blue); }
+.course__number span { font-family: var(--f-body); font-size: var(--t-s); color: var(--c-muted); }
+.course__title { font-size: min(var(--t-mega), 7.2rem); }
+.course__grid { margin-top: calc(var(--u) * 6); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: calc(var(--u) * 5) clamp(1.5rem, 4vw, 5rem); max-width: 72rem; }
+.course__grid .chips li { font-size: var(--t-m); }
+.course__opens-title { color: var(--c-muted); font-weight: 400; }
+.course__plain { margin-top: calc(var(--u) * 1.5); font-size: var(--t-m); }
+.course__take { grid-column: 1 / -1; }
+.event__count { grid-column: 1 / -1; font-size: var(--t-l); font-weight: 700; letter-spacing: -0.03em; }
+.event__count span { color: var(--c-blue); font-size: var(--t-xl); }
+.event__photos { margin-top: calc(var(--u) * 6); }
+
 /* ---------- Phone ---------- */
 
 @media (max-width: 767px) {
@@ -401,4 +489,18 @@ p code, li code { font-size: 0.9em; color: var(--c-blue); overflow-wrap: anywher
   .gallery li { flex: 0 0 auto; height: 14rem; scroll-snap-align: start; }
 
   .roster__link { grid-template-columns: minmax(0, 1fr); gap: 0.1rem; }
+
+  .commit__meta { flex-direction: row; flex-wrap: wrap; gap: 0 0.8rem; padding-top: 0; }
+  .levels__row { grid-template-columns: minmax(0, 1fr); gap: 0.1rem; }
+  /* The map keeps its shape on a phone: it pans sideways, and the list below is the full index. */
+  .map { overflow-x: auto; overscroll-behavior-x: contain; padding-bottom: 0.75rem; }
+  .map__svg { min-width: 46rem; }
+  .catalog__link { grid-template-columns: minmax(0, 1fr); }
+  .course__grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Narrow phones: the cardinal stands for the name, so every section fits in the corner. */
+@media (max-width: 520px) {
+  .corner__name { display: none; }
+  .corner__nav { gap: 0.95rem; }
 }
