@@ -1,0 +1,54 @@
+{
+  "$schema": "../resource.schema.json",
+  "order": 3,
+  "about": "Free places to learn, for before, during and between classes.",
+  "steps": [
+    "Learn one language. Python reads most like English, but Java, C, C++, JavaScript and Go are all good first choices. A 100-level course counts.",
+    "Get comfortable with loops and recursion. Almost everything else is built on them.",
+    "Pick something you'd want to build, then read about people who built something like it: their problems, their tools, their words."
+  ],
+  "entries": [
+    {
+      "name": "The Python Tutorial",
+      "from": "Python",
+      "url": "https://docs.python.org/3/tutorial/",
+      "about": "The official tutorial, from your first line to classes and modules."
+    },
+    {
+      "name": "freeCodeCamp",
+      "from": "freeCodeCamp",
+      "url": "https://www.freecodecamp.org/learn",
+      "about": "Free courses with projects and certificates, mostly web development."
+    },
+    {
+      "name": "Khan Academy Computing",
+      "from": "Khan Academy",
+      "url": "https://www.khanacademy.org/computing",
+      "about": "Short lessons on programming and computer science, for a first look."
+    },
+    {
+      "name": "MDN Web Docs",
+      "from": "Mozilla",
+      "url": "https://developer.mozilla.org/en-US/",
+      "about": "The reference for HTML, CSS and JavaScript."
+    },
+    {
+      "name": "Eloquent JavaScript",
+      "from": "Marijn Haverbeke",
+      "url": "https://eloquentjavascript.net/",
+      "about": "A free book on JavaScript and programming in general."
+    },
+    {
+      "name": "Standard ML Basis Library",
+      "from": "SML family",
+      "url": "https://smlfamily.github.io/Basis/list.html",
+      "about": "The reference for Standard ML's built-in lists, strings and math, starting at List."
+    },
+    {
+      "name": "Curated programming resources",
+      "from": "Michael0x2a on GitHub",
+      "url": "https://github.com/Michael0x2a/curated-programming-resources/blob/master/resources.md",
+      "about": "A long, sorted list of tutorials and books by language and level."
+    }
+  ]
+}

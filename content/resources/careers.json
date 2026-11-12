@@ -1,0 +1,31 @@
+{
+  "$schema": "../resource.schema.json",
+  "order": 2,
+  "about": "Where internships, jobs and alumni are.",
+  "entries": [
+    {
+      "name": "Handshake",
+      "from": "Gordon Career Center",
+      "url": "https://wesleyan.joinhandshake.com/",
+      "about": "Wesleyan's job and internship board, where employers post for Wesleyan students."
+    },
+    {
+      "name": "Job and internship search",
+      "from": "Gordon Career Center",
+      "url": "https://careercenter.wesleyan.edu/channels/job-internship-search/",
+      "about": "Guides for finding and applying to internships."
+    },
+    {
+      "name": "WesConnect",
+      "from": "Wesleyan alumni",
+      "url": "https://wesleyancardinalsnetwork.com/",
+      "about": "The alumni network. Search for people working where you want to work and ask them about it."
+    },
+    {
+      "name": "Code_Wes on LinkedIn",
+      "from": "Code_Wes",
+      "url": "https://www.linkedin.com/company/codewes/",
+      "about": "Club alumni, updates and careers."
+    }
+  ]
+}

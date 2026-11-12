@@ -1,0 +1,14 @@
+{
+  "$schema": "../course.schema.json",
+  "number": "COMP 212",
+  "title": "Computer Science II",
+  "short": "CS II",
+  "kind": "gateway",
+  "requires": [
+    [
+      "COMP 211"
+    ]
+  ],
+  "summary": "The second half of the gateway sequence. Finish it and you can declare the major.",
+  "take": "You have coded... something. But why? And can it be better? Get ready to learn about CS' main three components: Correctness, Efficiency, and Speed."
+}

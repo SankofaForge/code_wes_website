@@ -1,0 +1,18 @@
+{
+  "$schema": "../course.schema.json",
+  "number": "COMP 332",
+  "title": "Computer Networks",
+  "short": "Networks",
+  "kind": "core",
+  "area": "systems",
+  "requires": [
+    [
+      "COMP 212"
+    ],
+    [
+      "MATH 228"
+    ]
+  ],
+  "summary": "The infrastructure and protocols behind the Internet and other networks, with programming assignments in Python.",
+  "take": "How did the stuff from www.stackoverflow.com get to me? And why did it take 32 steps to get to my computer?"
+}

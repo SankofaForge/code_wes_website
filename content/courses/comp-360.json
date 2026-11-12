@@ -1,0 +1,11 @@
+{
+  "$schema": "../course.schema.json",
+  "number": "COMP 360",
+  "title": "Topics in Computer Science",
+  "short": "Topics",
+  "kind": "elective",
+  "requires": [],
+  "requiresNote": "Depends on the topic. Check WesMaps for the term.",
+  "summary": "Offered irregularly. Recent topics include Information Security and Privacy, Randomized Algorithms, Network Science, Advanced Functional Programming, Applied Logic and Logic Programming, and Artificial Intelligence.",
+  "take": "Use all the blockers and vpns you want, tor is the only safe way to get to handshake."
+}

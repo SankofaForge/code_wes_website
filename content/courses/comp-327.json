@@ -1,0 +1,16 @@
+{
+  "$schema": "../course.schema.json",
+  "number": "COMP 327",
+  "title": "Evolutionary and Ecological Bioinformatics",
+  "short": "Evo. Bioinformatics",
+  "kind": "elective",
+  "requires": [
+    [
+      "COMP 212",
+      "COMP 312"
+    ]
+  ],
+  "requiresNote": "COMP 212 or COMP 312, or one of several biology courses (BIOL 181, 182, 195, 205, 206, 207 or 225).",
+  "summary": "Algorithms for phylogeny, sequence alignment and genome analysis, team-taught by an evolutionary biologist and a computer scientist. Cross-listed as BIOL 327.",
+  "take": "Build the algorithms that will solve the major medical issues of our time by constantly searching google for simple python commands."
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../course.schema.json",
+  "number": "COMP 331",
+  "title": "Computer Structure and Organization",
+  "short": "Architecture",
+  "kind": "core",
+  "area": "systems",
+  "requires": [
+    [
+      "COMP 212"
+    ]
+  ],
+  "summary": "How digital computers work, from the logic of circuits to machine architecture, with assembly language programming.",
+  "take": "Have you ever changed the battery on your computer? See all the other stuff you didn't touch? Want to know what they do?"
+}

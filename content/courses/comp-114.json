@@ -1,0 +1,10 @@
+{
+  "$schema": "../course.schema.json",
+  "number": "COMP 114",
+  "title": "How to Talk to Machines",
+  "short": "Talk to Machines",
+  "kind": "intro",
+  "requires": [],
+  "summary": "From instructing a robot, to the Turing machine, to high-level programming: how computers are built and how that shapes the way we program them.",
+  "take": "Want an introduction to the CS major? Take this to see if its for you."
+}

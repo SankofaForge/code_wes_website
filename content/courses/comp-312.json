@@ -1,0 +1,18 @@
+{
+  "$schema": "../course.schema.json",
+  "number": "COMP 312",
+  "title": "Algorithms and Complexity",
+  "short": "Algorithms",
+  "kind": "core",
+  "area": "algorithms",
+  "requires": [
+    [
+      "COMP 212"
+    ],
+    [
+      "MATH 228"
+    ]
+  ],
+  "summary": "Designing and analyzing correct, efficient algorithms: greedy algorithms, divide and conquer, dynamic programming and graph algorithms.",
+  "take": "Oh, you thought 212 was it? Nope! You have waaaay more to see about the big three."
+}

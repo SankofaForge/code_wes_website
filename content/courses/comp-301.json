@@ -1,0 +1,18 @@
+{
+  "$schema": "../course.schema.json",
+  "number": "COMP 301",
+  "title": "Automata Theory and Formal Languages",
+  "short": "Automata",
+  "kind": "core",
+  "area": "models of computation",
+  "requires": [
+    [
+      "COMP 211"
+    ],
+    [
+      "MATH 228"
+    ]
+  ],
+  "summary": "Regular, context-free and recursively enumerable languages, and the machines that recognize them: finite-state automata, pushdown automata and Turing machines.",
+  "take": "Wait, what is computer logic? How did we get to the universal computer? What did the British do?"
+}

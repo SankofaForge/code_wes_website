@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Code_Wes club numbers",
+  "description": "The numbers at the top of /log. Only the board adds a number here, and each one says what it counts and where it came from. Empty means nothing is shown.",
+  "type": "object",
+  "required": ["stats"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "founded": {
+      "type": "integer",
+      "minimum": 2000,
+      "description": "The year Code_Wes started. The site shows how many years that is."
+    },
+    "foundedSource": { "type": "string", "description": "How we know, such as \"WesNest registration\"." },
+    "stats": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["label", "value", "counts", "source"],
+        "additionalProperties": false,
+        "properties": {
+          "label": { "type": "string", "description": "Plural noun phrase shown after the number, such as \"hackathons organized\"." },
+          "value": { "type": "integer", "minimum": 0 },
+          "counts": { "type": "string", "description": "Exactly what is counted, such as \"people who attended at least one workshop\"." },
+          "source": { "type": "string", "description": "Where the number came from, such as \"workshop sign-in sheets, 2023 to 2026\"." }
+        }
+      }
+    }
+  }
+}

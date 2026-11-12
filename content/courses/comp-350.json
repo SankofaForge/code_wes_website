@@ -1,0 +1,11 @@
+{
+  "$schema": "../course.schema.json",
+  "number": "COMP 350",
+  "title": "Computational Media: Videogame Development",
+  "short": "Videogames",
+  "kind": "elective",
+  "requires": [],
+  "requiresNote": "No COMP prerequisite is listed. Check IDEA 350 in WesMaps.",
+  "summary": "The art and science of making games: game tools, legal and commercial sides, and team-built prototypes. Listed first as IDEA 350.",
+  "take": "Want to build the next Animal Crossing? Want to take one of the two courses at this school that gives you two credits for one class? Want to bash your head into the wall trying to get some pixels to move left?"
+}

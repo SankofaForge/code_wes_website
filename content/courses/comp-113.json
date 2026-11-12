@@ -1,0 +1,10 @@
+{
+  "$schema": "../course.schema.json",
+  "number": "COMP 113",
+  "title": "Bioinformatics Programming",
+  "short": "Bioinformatics",
+  "kind": "intro",
+  "requires": [],
+  "summary": "Programming for life science students with little or no experience, taught through sequence matching, database access and output parsing.",
+  "take": "Want to see a bit about how code can be used in bioinformatics research?"
+}

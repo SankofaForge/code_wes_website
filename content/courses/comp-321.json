@@ -1,0 +1,18 @@
+{
+  "$schema": "../course.schema.json",
+  "number": "COMP 321",
+  "title": "Design of Programming Languages",
+  "short": "PL Design",
+  "kind": "core",
+  "area": "programming languages",
+  "requires": [
+    [
+      "COMP 212"
+    ],
+    [
+      "MATH 228"
+    ]
+  ],
+  "summary": "How languages work: parameter passing, type checking and inference, control, data abstraction, modules and concurrency, across functional, object-oriented and logic languages.",
+  "take": "How does the computer do math? How do you? WRONG. You do it like a computer now. Just way slower, and using way more paper. Meet Mr. Sipser in your nightmares."
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../course.schema.json",
+  "number": "COMP 112",
+  "title": "Introduction to Programming",
+  "short": "Programming",
+  "kind": "intro",
+  "requires": [],
+  "summary": "A first course in a modern high-level language: input and output, control structures, types, functions and classes, plus a look at algorithms and program design.",
+  "take": "Never coded before? Want to give it a try? Take this class."
+}

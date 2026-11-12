@@ -1,0 +1,18 @@
+{
+  "$schema": "../course.schema.json",
+  "number": "COMP 211",
+  "title": "Computer Science I",
+  "short": "CS I",
+  "kind": "gateway",
+  "requires": [
+    [
+      "COMP 112",
+      "COMP 113",
+      "COMP 114",
+      "COMP 115"
+    ]
+  ],
+  "requiresNote": "Any 100-level COMP course, or equivalent programming experience. If you haven't taken one at Wesleyan, talk to the instructor first.",
+  "summary": "The first half of the gateway sequence you need to declare the major: programming in imperative and functional languages, correctness and cost, and proofs about programs.",
+  "take": "Maybe you've seen code before, but you don't really know what its doing. Get ready to figure it out."
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Code_Wes course",
+  "description": "One file per course in content/courses/. The file name is the page URL: content/courses/comp-212.json becomes /resources/courses/comp-212/.",
+  "type": "object",
+  "required": ["number", "title", "kind", "requires", "summary"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "number": { "type": "string", "pattern": "^COMP \\d{3}$", "description": "As WesMaps writes it, such as \"COMP 212\"." },
+    "title": { "type": "string" },
+    "short": { "type": "string", "maxLength": 20, "description": "A short name for the course map, such as \"CS II\". Defaults to the title." },
+    "kind": { "enum": ["intro", "gateway", "core", "elective"], "description": "Where the course sits in the major." },
+    "area": { "type": "string", "description": "The core area it covers, for core courses, such as \"systems\"." },
+    "requires": {
+      "type": "array",
+      "description": "Prerequisites. Each inner list is one requirement; any course in it satisfies it. [[\"COMP 212\"], [\"MATH 228\"]] means COMP 212 and MATH 228.",
+      "items": { "type": "array", "minItems": 1, "items": { "type": "string", "pattern": "^[A-Z&]{3,5} \\d{3}$" } }
+    },
+    "requiresNote": { "type": "string", "description": "Anything the list above can't say, such as \"or equivalent experience\"." },
+    "summary": { "type": "string", "description": "What the course covers, in one or two sentences." },
+    "take": { "type": "string", "description": "A student's honest one-liner about the course." },
+    "syllabus": {
+      "type": "object",
+      "required": ["url", "term"],
+      "additionalProperties": false,
+      "description": "Only for a syllabus the professor has made public or agreed to share.",
+      "properties": {
+        "url": { "type": "string", "pattern": "^https://" },
+        "term": { "type": "string", "description": "Such as \"Fall 2026\"." },
+        "professor": { "type": "string" }
+      }
+    }
+  }
+}

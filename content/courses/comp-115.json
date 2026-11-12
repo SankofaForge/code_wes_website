@@ -1,0 +1,10 @@
+{
+  "$schema": "../course.schema.json",
+  "number": "COMP 115",
+  "title": "How to Design Programs",
+  "short": "Design Programs",
+  "kind": "intro",
+  "requires": [],
+  "summary": "Designing programs step by step, from a problem statement to a well-organized solution, with a symbolic view of how a program runs. No experience expected.",
+  "take": "\"Never coded before? Want to give it a try? Take this class.\" - said one teacher, one time"
+}

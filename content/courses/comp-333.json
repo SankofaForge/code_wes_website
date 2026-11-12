@@ -1,0 +1,15 @@
+{
+  "$schema": "../course.schema.json",
+  "number": "COMP 333",
+  "title": "Software Engineering",
+  "short": "Software Eng.",
+  "kind": "core",
+  "area": "systems",
+  "requires": [
+    [
+      "COMP 212"
+    ]
+  ],
+  "summary": "Engineering web and mobile apps: requirements, architecture, usability studies and testing, plus licensing, business models and ethics.",
+  "take": "Remember why you joined this major? I bet it wasn't for DPL."
+}

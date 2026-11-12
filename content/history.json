@@ -1,0 +1,66 @@
+{
+  "about": "The club's history on /log, newest first. Commit messages are quoted as committed. Events in content/events/ are added to the log automatically.",
+  "entries": [
+    {
+      "date": "2024-09-21",
+      "title": "WesHack 2024",
+      "body": "The 2024 hackathon gets a repo in the Code-Wes org, pointing to its website.",
+      "sha": "bd85950",
+      "repo": "weshack-2024",
+      "author": "ananafrida",
+      "message": "Update README.md"
+    },
+    {
+      "date": "2023-10-08",
+      "title": "The guide gets presented",
+      "body": "The club guide is updated before a presentation, and an officer is added the same day.",
+      "sha": "b70a1d8",
+      "repo": "Code_Wes_Introduction",
+      "author": "danielgoldelman",
+      "message": "update before presentation"
+    },
+    {
+      "date": "2023-10-01",
+      "title": "The site learns to deploy itself",
+      "body": "A workflow builds the homepage on every push to main.",
+      "sha": "76b71aa",
+      "repo": "code_wes_website",
+      "author": "n-aggarwal",
+      "message": "Create nextjs.yml"
+    },
+    {
+      "date": "2023-09-07",
+      "title": "The first homepage",
+      "body": "Pull request #1 brings the typed name line that still opens the home page.",
+      "sha": "8885245",
+      "repo": "code_wes_website",
+      "author": "danielgoldelman",
+      "message": "initial homepage implimented"
+    },
+    {
+      "date": "2023-06-21",
+      "title": "A guide to the CS major",
+      "body": "The club writes down what it knows about Wesleyan's CS courses and faculty, from COMP 112 to the 300-level cores. It became the course map in Resources.",
+      "sha": "a0327c2",
+      "repo": "Code_Wes_Introduction",
+      "author": "n-aggarwal",
+      "message": "updated readme, emails, and wesCS",
+      "href": "https://github.com/Code-Wes/Code_Wes_Introduction/blob/main/wesCS.md"
+    },
+    {
+      "date": "2023-06-20",
+      "title": "Code-Wes on GitHub",
+      "body": "The organization opens, and the website repo gets its first commit two days later.",
+      "href": "https://github.com/Code-Wes"
+    },
+    {
+      "date": "2022-09-25",
+      "title": "Initial commit",
+      "body": "The oldest trace of the club on GitHub: the start of the guide that became Code_Wes_Introduction.",
+      "sha": "9edff70",
+      "repo": "Code_Wes_Introduction",
+      "author": "danielgoldelman",
+      "message": "Initial commit"
+    }
+  ]
+}

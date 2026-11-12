@@ -1,0 +1,12 @@
+{
+  "$schema": "../course.schema.json",
+  "number": "COMP 323",
+  "title": "Programming Language Implementation",
+  "short": "Language Impl.",
+  "kind": "core",
+  "area": "programming languages",
+  "requires": [],
+  "requiresNote": "The department page doesn't list prerequisites for this one. Check WesMaps for the term you plan to take it.",
+  "summary": "Building a language implementation: parsing, type checking and inference, interpreters and compilers.",
+  "take": "Want to code the computer's math? You sure?"
+}
