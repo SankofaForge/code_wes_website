@@ -1,5 +1,6 @@
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
+import { resourceIcons } from '@/data/resource-icons';
 
 // Loaders for everything in content/ except members (src/lib/members.ts). Each file is someone's
 // pull request, so a mistake stops the build with the file and the field to fix.
@@ -132,7 +133,7 @@ export const coursesNeeding = (number: string) => getCourses().filter((c) => c.r
 
 // ---------- Resources ----------
 
-export type ResourceEntry = { name: string; from?: string; url: string; about: string };
+export type ResourceEntry = { name: string; from?: string; icon?: string; url: string; about: string };
 export type ResourceFolder = { slug: string; file: string; order: number; about: string; steps: string[]; entries: ResourceEntry[] };
 
 export const getResourceFolders = memo((): ResourceFolder[] =>
@@ -149,6 +150,11 @@ export const getResourceFolders = memo((): ResourceFolder[] =>
         entries: entries.map((e: Data, i: number) => ({
           name: str(file, e, 'name'),
           from: optStr(e, 'from'),
+          icon: (() => {
+            const icon = optStr(e, 'icon');
+            if (icon && !resourceIcons[icon]) fail(file, `"${icon}" is not a mark in src/data/resource-icons.ts`);
+            return icon;
+          })(),
           url: https(file, e.url, `entry ${i + 1}`),
           about: str(file, e, 'about'),
         })),

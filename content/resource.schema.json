@@ -3,16 +3,29 @@
   "title": "Code_Wes resource folder",
   "description": "One file per folder in content/resources/: campus.json, careers.json, learning.json. Each entry is one link a CS student should know about.",
   "type": "object",
-  "required": ["about", "entries"],
+  "required": [
+    "about",
+    "entries"
+  ],
   "additionalProperties": false,
   "properties": {
-    "$schema": { "type": "string" },
-    "order": { "type": "integer", "description": "Position on /resources/. Courses are always first." },
-    "about": { "type": "string", "description": "One sentence on what the folder holds." },
+    "$schema": {
+      "type": "string"
+    },
+    "order": {
+      "type": "integer",
+      "description": "Position on /resources/. Courses are always first."
+    },
+    "about": {
+      "type": "string",
+      "description": "One sentence on what the folder holds."
+    },
     "steps": {
       "type": "array",
       "maxItems": 5,
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "description": "Optional numbered steps shown before the entries."
     },
     "entries": {
@@ -20,13 +33,32 @@
       "minItems": 1,
       "items": {
         "type": "object",
-        "required": ["name", "url", "about"],
+        "required": [
+          "name",
+          "url",
+          "about"
+        ],
         "additionalProperties": false,
         "properties": {
-          "name": { "type": "string" },
-          "from": { "type": "string", "description": "Who runs it, such as \"Gordon Career Center\"." },
-          "url": { "type": "string", "pattern": "^https://" },
-          "about": { "type": "string", "description": "What it is and who it's for, in a sentence." }
+          "name": {
+            "type": "string"
+          },
+          "from": {
+            "type": "string",
+            "description": "Who runs it, such as \"Gordon Career Center\"."
+          },
+          "icon": {
+            "type": "string",
+            "description": "A mark from src/data/resource-icons.ts, such as \"python\" or \"grant\"."
+          },
+          "url": {
+            "type": "string",
+            "pattern": "^https://"
+          },
+          "about": {
+            "type": "string",
+            "description": "What it is and who it's for, in a sentence."
+          }
         }
       }
     }

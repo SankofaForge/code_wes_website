@@ -6,42 +6,49 @@
     {
       "name": "Wesleyan Summer Grants",
       "from": "Gordon Career Center",
+      "icon": "grant",
       "url": "https://careercenter.wesleyan.edu/channels/grant-funding/",
       "about": "Funding for summer experiences, including unpaid or underpaid internships and research."
     },
     {
       "name": "Career Development Grant",
       "from": "Gordon Career Center",
+      "icon": "receipt",
       "url": "https://careercenter.wesleyan.edu/channels/grant-funding/",
       "about": "Helps cover career-related costs at any point in your four years at Wesleyan."
     },
     {
       "name": "Career advising",
       "from": "Gordon Career Center",
+      "icon": "advising",
       "url": "https://careercenter.wesleyan.edu/",
       "about": "Advisors by field, including one for science and mathematics, plus internship search help."
     },
     {
       "name": "New Venture Awards",
       "from": "Patricelli Center for Entrepreneurship",
+      "icon": "seed",
       "url": "https://www.wesleyan.edu/patricelli/grants/index.html",
       "about": "Awards for student projects, organizations and companies, with a nonprofit and a for-profit track. The center also gives smaller grants for prototypes."
     },
     {
       "name": "Tutoring",
       "from": "Hazel Quantitative Analysis Center",
+      "icon": "pencil",
       "url": "https://www.wesleyan.edu/qac/tutoring.html",
       "about": "Drop-in tutors for programming, SQL, MATLAB and statistical software, starting the second week of each semester."
     },
     {
       "name": "Summer Apprenticeship",
       "from": "Hazel Quantitative Analysis Center",
+      "icon": "chart",
       "url": "https://www.wesleyan.edu/qac/summer.html",
       "about": "Funded summer research with faculty, using statistics, high-performance computing, GIS or text analysis. Faculty nominate students each spring."
     },
     {
       "name": "Information for majors",
       "from": "Computer Science department",
+      "icon": "cap",
       "url": "https://www.wesleyan.edu/mathcs/cs/info_major.html",
       "about": "How to declare the major, and what it requires."
     }
