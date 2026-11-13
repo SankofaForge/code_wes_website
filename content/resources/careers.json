@@ -1,7 +1,7 @@
 {
   "$schema": "../resource.schema.json",
   "order": 2,
-  "about": "Where internships, jobs and alumni are.",
+  "about": "Find internships, jobs and Wesleyan alumni.",
   "entries": [
     {
       "name": "Handshake",

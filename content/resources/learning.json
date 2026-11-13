@@ -1,10 +1,10 @@
 {
   "$schema": "../resource.schema.json",
   "order": 3,
-  "about": "Free places to learn, for before, during and between classes.",
+  "about": "Free resources for learning before, during and between classes.",
   "steps": [
     "Learn one language. Python reads most like English, but Java, C, C++, JavaScript and Go are all good first choices. A 100-level course counts.",
-    "Get comfortable with loops and recursion. Almost everything else is built on them.",
+    "Get comfortable with loops and recursion. They're useful tools for solving many programming problems.",
     "Pick something you'd want to build, then read about people who built something like it: their problems, their tools, their words."
   ],
   "entries": [

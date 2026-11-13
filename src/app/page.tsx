@@ -27,8 +27,7 @@ export default function Home() {
           <div className="commit__text">
             <h2 className="commit__title commit__title--big">The {BOARD_YEAR} board</h2>
             <p className="commit__body">
-              Seven people run the club this year. Each one is a branch that merged into Code_Wes. Open one to read
-              their file.
+              Seven people run the club this year. Select a board member to learn more about them.
             </p>
           </div>
           <BoardMerge members={board} />
@@ -39,8 +38,7 @@ export default function Home() {
           <div className="commit__text">
             <h2 className="commit__title commit__title--big">Branch off here</h2>
             <p className="commit__body">
-              Every member has a file in this site&rsquo;s repository. Adding yours is a pull request with one small JSON
-              file and, if you like, a photo.
+              Want a page on this site? Add a JSON file and, if you like, a photo through a pull request.
             </p>
             <p className="commit__cta">
               <Link className="btn" href="/join/">Add yourself</Link>

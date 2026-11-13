@@ -16,7 +16,7 @@ export default function Members() {
       <header className="page__head">
         <h1 className="page__title" data-split="lines" data-intro>Members</h1>
         <p className="page__lede">
-          Everyone with a file in the site, board first. {members.length} so far. <Link className="link" href="/join/">Add yours</Link>.
+          Meet the people with pages on this site, starting with the board. {members.length} so far. <Link className="link" href="/join/">Add your page</Link>.
         </p>
       </header>
       <ol className="roster">

@@ -1,7 +1,7 @@
 {
   "$schema": "../resource.schema.json",
   "order": 1,
-  "about": "Money, help and people on campus that a CS student can use.",
+  "about": "Campus funding, support and people who can help CS students.",
   "entries": [
     {
       "name": "Wesleyan Summer Grants",
