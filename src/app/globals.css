@@ -407,12 +407,62 @@ p code, li code { font-size: 0.9em; color: var(--c-blue); overflow-wrap: anywher
 .levels dd { display: flex; flex-wrap: wrap; gap: 0.2rem 1.1rem; }
 .levels__course { font-size: var(--t-m); font-weight: 700; min-height: 1.75rem; display: inline-flex; align-items: center; }
 
-/* Resource links: name, who runs it, what it is. */
+/* A resources folder: meta, text, and the folder's drawing, which stays in view beside its links. */
+.commit--folder {
+  --lane: color-mix(in oklch, var(--c-blue), var(--c-red) var(--mix, 0%));
+  grid-template-columns: minmax(7rem, 9rem) minmax(0, 40rem) minmax(0, 22rem);
+}
+.commit--folder > .commit__meta { grid-column: 1; grid-row: 1; }
+.commit--folder > .commit__text { grid-column: 2; grid-row: 1; }
+.commit--folder > .art, .commit--folder > .art-link { grid-column: 3; grid-row: 1; align-self: start; position: sticky; top: 7rem; }
+.art-link { display: block; }
+@media (hover: hover) { .art-link:hover .art__lane { stroke-width: 9; } }
+
+.art svg { display: block; width: 100%; height: auto; overflow: visible; }
+.art path, .art circle { fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.art__ink { stroke: var(--c-fg); }
+.art__muted { stroke: var(--c-muted); }
+.art__line { stroke: var(--c-line); }
+.art__run, .art__node, .art__box { stroke: color-mix(in oklch, var(--c-blue), var(--c-red) var(--mix, 0%)); }
+.art .art__node { fill: var(--c-bg); }
+.art .art__fill { fill: var(--c-red); stroke: none; }
+.art__map path { stroke-width: 6; }
+.art__map .art__lane { transition: stroke-width 0.3s; }
+.art__box { fill: var(--c-bg); stroke-width: 5; }
+
+/* Resource links: a mark, then name, who runs it, what it is. */
 .shelf { list-style: none; padding: 0; margin-top: calc(var(--u) * 3); display: grid; gap: calc(var(--u) * 2.25); }
-.shelf li { display: flex; flex-wrap: wrap; gap: 0.15rem 0.9rem; align-items: baseline; }
+.shelf li { display: grid; grid-template-columns: 2.75rem minmax(0, 1fr); gap: 1.1rem; align-items: start; }
+.shelf__text { display: flex; flex-wrap: wrap; gap: 0.15rem 0.9rem; align-items: baseline; }
 .shelf__name { font-size: var(--t-m); font-weight: 600; }
 .shelf__from { font-size: var(--t-s); color: var(--c-muted); }
 .shelf__about { flex-basis: 100%; max-width: 38rem; }
+
+/* Marks sit a little crooked, like the polaroids, and straighten when you point at their link. */
+.mark {
+  width: 2.75rem; height: 2.75rem; display: grid; place-items: center;
+  background: #161b22; border: 1px solid var(--c-line);
+  rotate: var(--tilt, -3deg);
+  transition: rotate 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), translate 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.3s;
+}
+.shelf li:nth-child(even) .mark { --tilt: 2deg; }
+.shelf li:nth-child(3n) .mark { --tilt: -1deg; }
+.mark svg { width: 1.45rem; height: 1.45rem; overflow: visible; }
+.mark--glyph svg { width: 1.6rem; height: 1.6rem; }
+.mark--brand path { fill: var(--brand); }
+.mark--glyph path { fill: none; stroke: var(--lane); stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+@media (hover: hover) { .shelf li:hover .mark { rotate: 0deg; translate: 0 -3px; border-color: var(--lane); } }
+.shelf li:focus-within .mark { rotate: 0deg; translate: 0 -3px; border-color: var(--lane); }
+
+/* With motion on, folders start undrawn so nothing flashes before the draw; GSAP takes it from here. */
+.motion [data-folder] [data-draw] { stroke-dasharray: 1 1.2; stroke-dashoffset: 1; }
+.motion [data-folder] [data-pop], .motion [data-folder] .mark { opacity: 0; }
+
+@media (max-width: 1100px) {
+  .commit--folder { grid-template-columns: minmax(7rem, 9rem) minmax(0, 46rem); }
+  .commit--folder > .commit__text { grid-row: 2; }
+  .commit--folder > .art, .commit--folder > .art-link { grid-column: 2; grid-row: 1; position: static; width: min(100%, 18rem); margin-bottom: calc(var(--u) * 2); }
+}
 
 .start { margin-top: calc(var(--u) * 2.5); padding: 0; list-style: none; counter-reset: start; display: grid; gap: 0.8rem; max-width: 40rem; }
 .start li { counter-increment: start; display: grid; grid-template-columns: 2rem 1fr; }
@@ -492,6 +542,12 @@ p code, li code { font-size: 0.9em; color: var(--c-blue); overflow-wrap: anywher
 
   .commit__meta { flex-direction: row; flex-wrap: wrap; gap: 0 0.8rem; padding-top: 0; }
   .levels__row { grid-template-columns: minmax(0, 1fr); gap: 0.1rem; }
+  .commit--folder { grid-template-columns: minmax(0, 1fr); }
+  .commit--folder > .commit__meta { grid-row: 1; }
+  .commit--folder > .art, .commit--folder > .art-link { grid-column: 1; grid-row: 2; width: min(80%, 16rem); margin: 0.75rem 0 0.5rem; }
+  .commit--folder > .commit__text { grid-column: 1; grid-row: 3; }
+  .shelf li { grid-template-columns: 2.5rem minmax(0, 1fr); gap: 0.9rem; }
+  .mark { width: 2.5rem; height: 2.5rem; }
   /* The map keeps its shape on a phone: it pans sideways, and the list below is the full index. */
   .map { overflow-x: auto; overscroll-behavior-x: contain; padding-bottom: 0.75rem; }
   .map__svg { min-width: 46rem; }
